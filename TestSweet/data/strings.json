@@ -1,0 +1,29 @@
+{
+  "types": {
+    "name": {
+      "good": [
+        "Bob Barker",
+        "Darth Vadar",
+        "Steve Griffen"
+      ],
+      "bad": [
+        "7"
+      ]
+    },
+    "firstname": {
+      "good": [
+        "Bobby",
+        "Evan",
+        "Jack",
+        "Jill"
+      ],
+      "bad": [
+        "Johnny Rider",
+        "2387234823",
+        "   Jeff   ",
+        "Robert (Bob)",
+        ""
+      ]
+    }
+  }
+}
