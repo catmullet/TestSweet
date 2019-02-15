@@ -11,7 +11,10 @@ func (t *TestSweet) Test(test func(t *testing.T)) {
 }
 
 func (t *TestSweet) RunAll() {
-
+	for _, val := range t.SuiteOfTests {
+		t := testing.T{}
+		val(&t)
+	}
 }
 
 type StringData struct {
