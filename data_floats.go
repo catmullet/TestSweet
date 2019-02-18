@@ -11,7 +11,7 @@ import (
 var fd *FloatData
 
 func init() {
-	jsonFile, err := os.Open("TestSweet/data/floats.json")
+	jsonFile, err := os.Open("data/floats.json")
 
 	if err != nil {
 		panic(err)

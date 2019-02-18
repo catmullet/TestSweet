@@ -11,7 +11,7 @@ import (
 var sd *StringData
 
 func init() {
-	jsonFile, err := os.Open("TestSweet/data/strings.json")
+	jsonFile, err := os.Open("data/strings.json")
 
 	if err != nil {
 		panic(err)

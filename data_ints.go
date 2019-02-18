@@ -11,7 +11,7 @@ import (
 var id *IntData
 
 func init() {
-	jsonFile, err := os.Open("TestSweet/data/ints.json")
+	jsonFile, err := os.Open("data/ints.json")
 
 	if err != nil {
 		panic(err)

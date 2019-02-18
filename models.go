@@ -1,19 +1,28 @@
 package TestSweet
 
-import "testing"
+import (
+	"regexp"
+	"testing"
+)
+
+var Suite *TestSweet
+
+func init() {
+	Suite = new(TestSweet)
+}
 
 type TestSweet struct {
 	SuiteOfTests []func(t *testing.T)
 }
 
-func (t *TestSweet) Test(test func(t *testing.T)) {
+func (t *TestSweet) AddTest(test func(t *testing.T)) {
 	t.SuiteOfTests = append(t.SuiteOfTests, test)
 }
 
 func (t *TestSweet) RunAll() {
 	for _, val := range t.SuiteOfTests {
-		t := testing.T{}
-		val(&t)
+		testing.Main()
+
 	}
 }
 

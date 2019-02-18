@@ -11,7 +11,7 @@ func FillStruct(s interface{}) {
 	for i := 0; i < v.NumField(); i++ {
 		fv := v.Field(i)
 		ft := t.Field(i)
-		varType := ft.Tag.Get("TestSweet")
+		varType := ft.Tag.Get("test")
 
 		if varType != "" || fv.Kind() == reflect.Struct {
 			switch fv.Kind() {
