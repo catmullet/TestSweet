@@ -4,20 +4,15 @@ import (
 	"encoding/json"
 	"io/ioutil"
 	"math/rand"
-	"os"
 	"time"
 )
 
-var fd *FloatData
+var fd *floatData
 
 func init() {
-	jsonFile, err := os.Open("data/floats.json")
+	jsonFile := getDataFile("floats.json")
 
-	if err != nil {
-		panic(err)
-	}
-
-	var data FloatData
+	var data floatData
 
 	defer jsonFile.Close()
 

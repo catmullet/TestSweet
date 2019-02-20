@@ -4,7 +4,7 @@ import (
 	"reflect"
 )
 
-func FillStruct(s interface{}) {
+func (ts *testSweet)FillStruct(s interface{}) {
 	v := reflect.ValueOf(s).Elem()
 	t := reflect.TypeOf(s).Elem()
 

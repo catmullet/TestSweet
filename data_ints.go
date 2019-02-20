@@ -4,20 +4,15 @@ import (
 	"encoding/json"
 	"io/ioutil"
 	"math/rand"
-	"os"
 	"time"
 )
 
-var id *IntData
+var id *intData
 
 func init() {
-	jsonFile, err := os.Open("data/ints.json")
+	jsonFile := getDataFile("ints.json")
 
-	if err != nil {
-		panic(err)
-	}
-
-	var data IntData
+	var data intData
 
 	defer jsonFile.Close()
 
